@@ -1,0 +1,92 @@
+1) printf("%d\n",1==5==5);  -- Ans is 0, as execution takes place from left to right;
+
+2) int i =0;
+   printf("%d %d",i,i++);
+3) int x=5;
+   printf("%d %d %d\n",x++,x++,x++);
+Ans -- For both 2 and 3 the output cannot be determined because the order in which 
+arguments to a function are evaluated is not defined by the C standard. 
+
+4) int x=2;
+   printf("%d   ",++x++);
+   printf("%d\n",x++);
+Ans -- The output will be 3 and 4.
+
+5) int k=1;
+   printf("%d==1 is ""%s\n",k,k==1?"TRUE":"FALSE");
+Ans -- The output is TRUE because k==1 is true and that particular string is printed
+
+6) int i=5;
+   i=i++ - --i + ++i;
+Ans -- Since addition and substraction goes from right to left, the output will be 6;
+
+7) int a=7;
+   a+=a+=a-=6;
+   printf("%d\n",a);
+Ans -- Since the expression is evaluated from right to left, The ans is 4
+
+8) int x=10,y=5,p,q;
+   p=x>9;
+   q=p||(x=5,y=10);
+   printf("%d %d %d\n",q,x,y);
+Ans -- p = 1, so q=1 and since right side of logical or is not evaluated we get x = 10 ,y=5
+
+9) int x=2,y=1;
+   y+=x<<=2;
+   printf("%d %d\n",x,y);
+Ans -- We get x = x<<2 So x = 8 and y = y+x, so get y = 9
+
+10) int x=2,y=4,z;
+    z=y++*x++|y--;
+    printf("%d\n",z);
+Ans -- The exp we get is 4*2|5 and ans is 13
+
+11) int a=5,b=6,c=7,d;
+    d=a&=b&=c&&a;
+    printf("%d\n",d);
+Ans -- c&&a is 1 and 6&1 is 0. SO we get d = 0
+
+12) int i=10;
+    i=(10<10)?(10>=10)?(10<=10)?1:2:3:4;
+    printf("%d\n",i);
+Ans -- We need to start from inside ternary operator. We get i = 4
+
+13) int a=10,b=20;
+    a=(a>5||b==6?40:50);
+    printf("%d\n",a);
+Ans -- b==6 || a>5. we get 1 for this and a = 40 is ans
+
+14) printf("%x\n",-1>>4);
+    printf("%x\n",-1<<4);
+Ans -- Here right and left shift is happening and we are printing in hexadecimal
+So we get ffffffff and fffffff0
+
+15) int x=7;
+    x=(x<<=x%2);
+    printf("%d\n",x);
+Ans -- x is lefy shifted once which gives 14 . so that is the ans
+
+16) int a=2,b=5,c=1;
+    printf("%d\n",(b>=a>=c?1:0));
+Ans -- 5>=2 which is true and 1>=1 which is also true which gives output 1
+
+17) int a=5;
+    a=a-~a +1;
+    printf("%d\n",a);
+Ans -- -6 is ~a and we get output 6-(-6) which is 12
+
+18) a=b=c=1;
+    x=--a||++b*(3-1)/2&&b*(--c/3);
+    printf("%d\n ",x);
+Ans -- We get --c as 0 So we get x = --a||0 which gives x =0;
+
+19) a=10
+    b = -5
+    c = 2.5
+    printf("%d %d",sizeof(a) + sizeof((++b) *c, b);
+Ans -- We get 8 and -5. because size of int is 4.
+
+20) int i=5;
+    i=i++ - i
+    printf("%d",i)
+Ans -- Since expression is evaluated from left to right we get 5-6 which is -1
