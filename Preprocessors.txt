@@ -1,0 +1,144 @@
+
+
+PREPROCESSORS AND MACROS
+
+1) What will be the output of the C program?
+#include<stdio.h>
+#define CONDITION(i)\
+printf("preprocessor works\n");                         
+int main()
+{
+	CONDITION(0);
+	return 0;
+}
+Ans -- Output is "preprocessor works". It works with whatever the value of i is. It may be any datatype.
+
+2) What will be the output of the C program?
+#include<stdio.h>
+# define loop while(true)
+int main()
+{
+	loop;  
+	printf("preprocessor-aptitude");
+	return 0;
+}
+Ans -- The loop will keep of going for ever
+
+3) What will be the output of the C program?
+#include<stdio.h>
+# define x --5
+int main()
+{
+	printf("%d",x);
+	return 0;
+}
+Ans -- We get an error because macro is just used for replacement but the preprocessor does not understand 
+or perform runtime operations like decrementing a constant
+
+4) What will be the output of the C program ?
+#include<stdio.h>
+#define sqr(x) ++x * ++x
+int main()
+{
+	int a = 3, z;
+	z = ++a * ++a;     
+	a -= 3;
+	printf("%d %d", sqr(a), z);
+	return 0;
+}
+Ans -- The output will be 16,25;
+
+5) What will be the output of the C program?
+#include<stdio.h>                      
+#define x 1+2
+int main()
+{
+	int i;
+	i = x * x * x;
+	printf("%d",i);
+}
+Ans -- The output will be 3*3*3 which is 27
+
+6) What will be the output of the C program?
+#include<stdio.h>
+#define a =
+int main()
+{
+	int num a 6;
+	printf("%d",num);
+	return 0;
+}
+Ans -- Since macro is used for replacement a is replaced by =. so output will be 6
+
+7) What will be the output of the C program?
+#include<stdio.h>
+#define fun(x,y) x*y
+int main()
+{
+	int x = 2, y = 1;
+	printf("%d",fun(x + 2, y - 1));
+	return 0;
+}
+Ans -- The output will be 4*0 which is 0;
+
+8) What will be the output of the C program?
+#include<stdio.h>
+int main()
+{
+	char DATE[15] = "Current Date";
+	printf("%s\n", __DATE__ );
+	return 0;
+}
+Ans -- __DATE__ is a preprocessor macro that expands to the current date
+
+9) What will be the output of the C program?
+#include<stdio.h>
+int main()
+{
+	char TIME[15] = "Current Time";
+	printf("%s\n",__TIME__);
+	return 0;
+}
+Ans -- The __TIME__ macro can be used to provide information about the particular moment a binary was built
+
+10) What will be the output of the C program?
+#include<stdio.h>
+int main()
+{	
+	printf("Line :%d\n", __LINE__ );
+	return 0;
+}
+Ans -- __LINE__ macro will be used to tell on which line the statement is
+
+11) What will be the output of the C program?
+#include<stdio.h>
+#define  preprocessor_works(x, y)  \
+	printf(#x " and " #y " are great!\n")
+int main(void) {
+	preprocessor_works(you, me);
+	return 0;
+}
+Ans -- # is used for stringification. The output will be "You and me are great"
+
+13) What will be the output of the C program?
+#include<stdio.h>
+#define preprocessor(n) printf ("macro" #n " = %d", macro##n)
+int main(void) {
+	int macro25 = 47;
+	preprocessor(25);
+	return 0;
+}
+Ans -- The output will be macro25 = 47;
+
+14) What will be the output of the C program?
+#include<stdio.h>
+#include<string.h>
+#define MACRO(num) ++num 
+int main()
+{
+	char *ptr = "preprocessor";
+	int num =strlen(ptr);
+	printf("%s  ", MACRO(ptr));
+	printf("%d", MACRO(num));
+	return 0;
+}
