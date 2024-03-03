@@ -5,16 +5,17 @@
 int main() 
 {
     int a[] = {5,4,3,2,1};
+    int* p = a;
     int n = sizeof(a)/sizeof(a[0]);
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n-1;j++)
         {
-            if(a[i]<a[j])
+            if(*(p+i)<*(p+j))
             {
-                int temp = a[i];
-                a[i]= a[j];
-                a[j] = temp;
+                int temp = *(p+i);
+                *(p+i)= *(p+j);
+                *(p+j) = temp;
             }
         }
     }
@@ -23,4 +24,3 @@ int main()
         printf("%d ",a[i]); 
     }
     return 0;
-}
