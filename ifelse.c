@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     //for printing even numbers
     for(int i=1;i<=100;i++)
     {
