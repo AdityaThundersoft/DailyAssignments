@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define MAXNUM 3
 void sum_up(void);
-
+  
 int main()
 {
     int count;
