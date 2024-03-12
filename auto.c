@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 int func(void)
 {
     auto int a =5;
