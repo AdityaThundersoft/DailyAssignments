@@ -1,13 +1,10 @@
-#include <stdio.h>
-int func(void)
-{
-    register int a =5;
-    printf("%d",a);
-}
+#include<stdio.h>
 
-int main() {
-    register int a=10;
-    printf("%d\n",a);
-    func();
-    return 0;
+int main()
+{
+    register int i;
+    for(i=0;i<=100;i++)
+    {
+        printf("%d ",i);
+    }
 }
