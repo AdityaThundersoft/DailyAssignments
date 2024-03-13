@@ -2,7 +2,8 @@
 
 int main()
 {
-    int n=5;
+    printf("enter n: ");
+    scanf("%d",&n);
     for(int i=1;i<=n;i++)
     {
         for(int j=0;j<i;j++)
@@ -13,3 +14,8 @@ int main()
     }
     return 0;
 }
+// *
+// **
+// ***
+// ****
+// *****
