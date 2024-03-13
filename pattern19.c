@@ -2,7 +2,9 @@
 
 int main()
 {
-    int n=5;
+    int n;
+    printf("enter n: ");
+    scanf("%d",&n);
     for(int i=1;i<=n;i++)
     {
         for(int j=0;j<i;j++)
@@ -18,3 +20,8 @@ int main()
     }
     return 0;
 }
+// 1 
+// * * 
+// 2 2 2 
+// * * * * 
+// 3 3 3 3 3 
