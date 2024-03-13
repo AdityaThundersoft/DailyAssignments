@@ -5,7 +5,9 @@ int main()
 {
     char A = 'A';
     char a = 'a';
-    int n=5;
+    int n;
+    printf("enter n: ");
+    scanf("%d",&n);
     for(int i=1;i<=n;i++)
     {
         for(int j=1;j<n-(i-1);j++)
@@ -31,3 +33,8 @@ int main()
     }
     return 0;
 }
+//     A
+//    bb
+//   CCC
+//  dddd
+// EEEEE
