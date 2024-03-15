@@ -36,7 +36,7 @@ int main()
                 mul[i][j]=0;    
                 for(int k=0;k<c1;k++)    
                 {    
-                  mul[i][j]+=a[i][k]*b[k][j];
+                  mul[i][j]+=*(*(a+i)+k) * *(*(b+k)+j);
                   
                 }    
                 printf("%d ",mul[i][j]);
