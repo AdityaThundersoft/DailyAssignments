@@ -1,3 +1,4 @@
+//Write a C program to copy one string to another string and find length of new string using pointers.
 #include <stdio.h>
 
 int main() 
