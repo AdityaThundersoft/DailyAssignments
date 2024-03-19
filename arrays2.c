@@ -23,3 +23,8 @@ int main()
     int sum = add(a,n,0);
     printf("\nthe sum of elements in array is %d",sum);
 }
+// enter n: 5
+// enter array elements
+// 1 2 3 4 5
+
+// the sum of elements in array is 15
