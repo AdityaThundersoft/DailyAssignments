@@ -1,3 +1,4 @@
+//WAP to add two 2D arrays and print the resultant array.
 #include <stdio.h>
 
 void add_matrix(int r, int c, int a[r][c], int b[r][c], int sum[r][c]) {
