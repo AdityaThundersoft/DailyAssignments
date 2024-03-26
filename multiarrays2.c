@@ -1,7 +1,6 @@
 
 // Online C compiler to run C program online
 #include <stdio.h>
-
 int main() {
     int r,c;
     printf("enter r and c: ");
