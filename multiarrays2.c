@@ -1,5 +1,5 @@
 
-// Online C compiler to run C program online
+// C program to remove a row and column in a matrix
 #include <stdio.h>
 int main() {
     int r,c;
