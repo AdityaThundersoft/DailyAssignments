@@ -4,19 +4,15 @@
 
 int firstoccur(char* str, char c)
 {
-    int count = 0;
     int i;
-    for(i=0;i<strlen(str);i++)
+    for(i = 0; i < strlen(str); i++)
     {
-        if(str[i]==c)
-        {
-            printf("%c is first occured at index %d",c,i);
-            break;
-        }
+        (str[i] == c) ? return i : ; // Return index if character is found
     }
     
-    return i;
+    return -1; // Return -1 if character is not found
 }
+
 
 int main()
 {
